@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button``;
 
-function PlayButton({ playerState, togglePlayButton }) {
+function PlayButton({ playerState, onClick }) {
   function getPlayerIcon(playerState) {
     switch (playerState) {
       case 'PLAYING':
@@ -16,7 +16,7 @@ function PlayButton({ playerState, togglePlayButton }) {
   return (
     <StyledButton
       onClick={() => {
-        togglePlayButton(playerState);
+        onClick(playerState);
       }}
     >
       <i>{getPlayerIcon(playerState)}</i>

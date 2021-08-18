@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Counter } from './features/counter/Counter';
-import PlayButton from './components/PlayButton';
+// import { Counter } from './features/counter/Counter';
+import { PlayButton, SeekBar } from './components';
 import './App.css';
 
 function App() {
@@ -29,9 +29,9 @@ function App() {
       <header className="App-header">
         <PlayButton
           playerState={playerState}
-          togglePlayButton={togglePlayButton}
+          onClick={togglePlayButton}
         ></PlayButton>
-        <Counter />
+        <SeekBar></SeekBar>
       </header>
     </div>
   );
